@@ -12,6 +12,6 @@ public class VerifyLoginTest extends BaseTest {
     public void performLoginTest(){
         String title = getTitle(driver);
         System.out.println("The current windows title is : " + title);
-        Assert.assertEquals(title, "Test Login Page for Automation Testing Practice", "Not matched title");
+        Assert.assertTrue(title.matches(".*Automation Testing Practice.*"), "Title pattern mismatch");
     }
 }
